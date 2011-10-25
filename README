@@ -1,3 +1,7 @@
 This is just a simple content div slider based on JQuery and JQuery-ui. If you like to improve you can fork it. 
 
 It's based on this article but slightly modified: http://www.switchonthecode.com/tutorials/using-jquery-slider-to-scroll-a-div
+
+Example:
+
+http://www.keesschepers.nl/jquery-ui-content-slider
