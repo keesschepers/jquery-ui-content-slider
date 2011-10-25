@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head> 
+
+        <title>Jquery-ui-content-slider</title>	
+        <link href="css/smoothness/jquery-ui-1.8.16.custom.css" media="screen" rel="stylesheet" type="text/css" />
+        <style type="text/css">            
+            #main {
+                width: 510px;
+                margin: 0 auto;
+            }
+
+            #content-slider {
+                width: 490px;
+                height: 6px;
+                margin: 10px 10px 20px 10px;
+                background: #BBBBBB;
+                position: relative;                
+            }
+
+            .ui-slider-handle {
+                width: 8px;
+                height: 14px;
+                position: absolute;
+                top: -4px;                
+                background: #478AFF;
+                border: solid 1px black;
+            }
+
+            #content-scroll {
+                width: 500px;
+                height: 300px;
+                margin-top: 10px;
+                overflow: hidden;
+                border: solid 1px black;
+            }
+
+            #content-holder {
+                width: 1500px;
+                height: 270px;
+            }
+
+            .content-item {
+                width: 290px;
+                height: 270px;
+                padding: 5px;
+                float: left;                
+            }            
+        </style>
+
+    </head>
+
+    <body>
+        <div id="main">
+            <p>This feature has been adapted and improved from: <a href="http://www.switchonthecode.com/tutorials/using-jquery-slider-to-scroll-a-div">switchonthecode.com</a></p>
+            <p>Works with JQuery-ui 1.8.16 and JQuery 1.6.4!</p>
+            <p>Find it on <a href="https://github.com/keesschepers/jquery-ui-content-slider" target="_blank">GitHub</a></p>
+            <div id="content-slider"></div>
+            <div id="content-scroll">
+                <div id="content-holder">
+                    <div class="content-item">
+                        <strong>One</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris scelerisque dapibus ornare. Nulla dignissim mollis nisl, at tincidunt justo consequat nec. Nam commodo fringilla massa sit amet scelerisque. Pellentesque porta rutrum bibendum. Maecenas vestibulum tincidunt nulla, sit amet semper nibh sagittis vel. Sed pharetra tempor fermentum. Donec hendrerit lorem non dolor elementum ultrices. Sed dictum porta rutrum. Donec fringilla dolor et elit ultrices aliquet. Nulla odio nibh, vestibulum ac aliquet id, mattis et quam. Suspendisse tincidunt odio quis turpis accumsan nec molestie quam lobortis. Duis at massa eget orci porta rutrum vel sed nunc. Pellentesque ac libero eget libero posuere condimentum. Donec augue nulla, varius eu ultrices sed, posuere non augue. Nulla facilisi.                         
+                    </div>
+                    <div class="content-item">
+                        <strong>Two</strong> Nullam mattis ipsum tortor. Proin nibh felis, mattis sed tristique sit amet, cursus a orci. In ultrices tincidunt leo, ac lobortis lacus commodo eget. Nunc sagittis fermentum odio a elementum. Aenean quis metus non sem consectetur placerat. Aenean sodales, dolor vitae ultrices lobortis, augue mauris egestas ligula, non facilisis risus ante sit amet arcu. Phasellus nulla neque, mollis ac laoreet sit amet, mattis non ante. Praesent sodales hendrerit eleifend. 
+                    </div>
+                    <div class="content-item">
+                        <strong>Three</strong> Donec in risus mi, at sagittis enim. Etiam condimentum, purus sed tempus rhoncus, lacus tellus pharetra quam, ut ultricies nibh mauris ac sapien. Phasellus et malesuada tortor. Phasellus placerat felis in ligula pretium vitae semper erat mattis. Duis tristique ultricies congue. Aliquam aliquam, enim nec ullamcorper tristique, nisi arcu pulvinar risus, eu dapibus nulla tortor vitae neque. Pellentesque faucibus mauris nec felis fringilla ultrices ut at leo. Curabitur pretium ipsum posuere sem aliquam at iaculis mi malesuada. 
+                    </div>
+                    <div class="content-item">
+                        <strong>Four</strong> Morbi aliquam metus sit amet neque tempus sit amet euismod velit convallis. Pellentesque dignissim adipiscing leo, a rhoncus risus egestas in. Morbi luctus est ac mauris vehicula cursus. Ut fermentum, neque id placerat varius, odio arcu interdum lacus, eget posuere dolor nisl a lectus. Pellentesque viverra, ipsum ac volutpat tincidunt, felis dolor facilisis lacus, id elementum est neque quis velit. Cras iaculis accumsan est, in elementum felis elementum laoreet. Mauris blandit sem viverra leo molestie et auctor nisl lacinia. Donec scelerisque dictum neque feugiat fermentum. Nullam quis accumsan elit. Donec et tortor sit amet augue egestas placerat. Quisque non est in arcu ornare consequat hendrerit et erat. 
+                    </div>
+                    <div class="content-item">
+                        <strong>Five</strong> Sed purus augue, ultrices et vehicula non, viverra ac est. Cras sit amet varius mi. In hac habitasse platea dictumst. Pellentesque lacinia neque sit amet ante placerat eget pulvinar nisi sollicitudin. Nullam pulvinar ligula vitae risus pulvinar consectetur rutrum ipsum dapibus. Phasellus ut viverra nisi. Aliquam erat volutpat. Duis imperdiet leo in libero mattis consequat. Aenean vestibulum, mauris a molestie accumsan, purus quam ultricies libero, eget dignissim tortor nisi rutrum odio. Duis eget nisi odio. Ut sagittis, sapien ac faucibus suscipit, diam nisi semper eros, volutpat porttitor dui enim in metus.                        
+                    </div>
+                </div>
+            </div>
+        </div>        
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $("#content-slider").slider({
+                    animate: true,
+                    change : function (e, ui) {                                
+                        var maxScroll = $("#content-scroll").prop("scrollWidth") -
+                            $("#content-scroll").width();            
+                        $("#content-scroll").animate({
+                            scrollLeft : ui.value * (maxScroll / 100)
+                        }, 1000);
+                    },
+                    slide : function (e, ui)
+                    {                
+                        var maxScroll = $("#content-scroll").prop("scrollWidth") -
+                            $("#content-scroll").width();
+                        $("#content-scroll").prop('scrollLeft' ,ui.value * (maxScroll / 100));
+                    }  
+                });    
+            });
+        </script>
+    </body>
+</html>
